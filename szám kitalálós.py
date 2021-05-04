@@ -4,23 +4,23 @@ import random
 def main():
     guess_limit = range(11)
     random_guess = random.choice(guess_limit)
-    print("\n\nGondoltam egy számra 0-10 között!\nTaláld ki melyik lehet az!")
-    tipp = int(input("\nTE melyik számra tippelsz? "))
+    print("\n\nI guessed a number between 0-10 !\nFind out which one is!")
+    tipp = int(input("\nWhat's your Guess? "))
     if tipp != random_guess:
-        print("\nEz nem jött össze, NEM talált!!!")
+        print("\nNOPE, missfired!!!")
     else:
-        print("\nTeli találat! NAGYAON ÜGYES vagy!!!!")
-    print("Erre gondoltam!", random_guess)
+        print("\nBULLSEYE! YOU are very ClEVER!!!!")
+    print("I guessed to:", random_guess)
     replay()
 
 
 def replay():
-    print("\n\nMegpróbálod újra?")
-    rep_answ = str(input("Igen (i) / Nem (n): "))
-    if rep_answ == str("i"):
+    print("\n\nDo you wanna try again?")
+    rep_answ = str(input("Yes (y) / No (n): "))
+    if rep_answ == str("y"):
         main()
     else:
-        print("\n\tKöszi, hogy játszottunk! Találkozunk legközelebb is! Bye!")
+        print("\n\tThanks for the Game! See-Ya!")
 
 
 main()
